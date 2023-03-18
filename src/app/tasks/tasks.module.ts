@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 import { TasksService } from './shared/tasks.service';
 import { TodoListComponent } from './list/todo-list.component';
@@ -11,7 +13,9 @@ import { TodoListComponent } from './list/todo-list.component';
     TodoListComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule,
+    FormsModule
   ],
   providers: [
     TasksService
