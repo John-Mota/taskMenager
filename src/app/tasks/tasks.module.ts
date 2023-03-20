@@ -6,13 +6,15 @@ import { FormsModule } from '@angular/forms';
 import { TasksService } from './shared/tasks.service';
 import { TodoListComponent } from './list/todo-list.component';
 import { RegisterTasksComponent } from './register-tasks/register-tasks.component';
+import { TaskEditingComponent } from './task-editing/task-editing.component';
 
 
 
 @NgModule({
   declarations: [
     TodoListComponent,
-    RegisterTasksComponent
+    RegisterTasksComponent,
+    TaskEditingComponent
   ],
   imports: [
     CommonModule,
