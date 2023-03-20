@@ -5,12 +5,14 @@ import { FormsModule } from '@angular/forms';
 
 import { TasksService } from './shared/tasks.service';
 import { TodoListComponent } from './list/todo-list.component';
+import { RegisterTasksComponent } from './register-tasks/register-tasks.component';
 
 
 
 @NgModule({
   declarations: [
-    TodoListComponent
+    TodoListComponent,
+    RegisterTasksComponent
   ],
   imports: [
     CommonModule,
