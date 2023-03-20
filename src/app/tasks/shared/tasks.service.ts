@@ -30,7 +30,7 @@ export class TasksService {
     const tasks: Tasks[] = this.listAll();
     tasks.forEach((obj, index, objs) => {
       if (task.id === obj.id) {
-        obj[index] = task;
+        objs[index] = task;
       }
     });
     localStorage['tarefas'] = JSON.stringify(tasks);
