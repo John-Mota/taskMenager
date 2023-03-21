@@ -14,11 +14,16 @@ export const TaskRoutes: Routes = [
         component: TodoListComponent
     },
     { 
-        path: 'tarefas/registrar', 
+        path: 'tasks/register-tasks', 
         component: RegisterTasksComponent
     },
     {
         path: 'tarefas/editar/:id', 
 		component: TaskEditingComponent
     }
+
+    /*
+    { path: 'tarefas/list', component: TodoListComponent},
+    { path: 'tasks/register-tasks', component: RegisterTasksComponent}
+    */
 ]

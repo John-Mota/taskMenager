@@ -32,7 +32,8 @@ export class TodoListComponent implements OnInit {
   }
 
   public alterarStatus(task: Tasks): void {
-    if(confirm('Deseja alterar o status da tarefa "' + task.nome + '"?')) {
+    
+    if(confirm('Deseja alterar a tarefa "' + task.nome + '"?')) {
       this.tasksService.changeStatus(task.id);
       this.tasks = this.lisarTodos();
     }
