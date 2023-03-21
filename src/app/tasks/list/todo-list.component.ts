@@ -9,17 +9,14 @@ import { TasksService } from '../shared/tasks.service';
 })
 export class TodoListComponent implements OnInit {
 
-  public tasks: Tasks[];
+  tasks: Tasks[];
 
   constructor(private tasksService: TasksService) {
 
   }
   ngOnInit(): void {
     this.tasks = this.lisarTodos()
-    this.tasks = [
-      new Tasks(21, 'Estudar', false),
-      new Tasks(21, 'Trabalhar', true)
-    ]
+    
   }
 
   public lisarTodos(): Tasks[] {
@@ -30,7 +27,14 @@ export class TodoListComponent implements OnInit {
     $event.preventDefault();
     if(confirm('Deseja remover a tarefa "' + tasks.nome + '"?')) {
       this.tasksService.remove(tasks.id);
-      this.tasks = this.tasksService.listAll();
+      this.tasks = this.lisarTodos();
+    }
+  }
+
+  public alterarStatus(task: Tasks): void {
+    if(confirm('Deseja alterar o status da tarefa "' + task.nome + '"?')) {
+      this.tasksService.changeStatus(task.id);
+      this.tasks = this.lisarTodos();
     }
   }
 }
