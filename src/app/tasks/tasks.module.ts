@@ -7,6 +7,7 @@ import { TasksService } from './shared/tasks.service';
 import { TodoListComponent } from './list/todo-list.component';
 import { RegisterTasksComponent } from './register-tasks/register-tasks.component';
 import { TaskEditingComponent } from './task-editing/task-editing.component';
+import { CompletedTasksDirective } from './shared/completed-tasks.directive';
 
 
 
@@ -14,7 +15,8 @@ import { TaskEditingComponent } from './task-editing/task-editing.component';
   declarations: [
     TodoListComponent,
     RegisterTasksComponent,
-    TaskEditingComponent
+    TaskEditingComponent,
+    CompletedTasksDirective
   ],
   imports: [
     CommonModule,
